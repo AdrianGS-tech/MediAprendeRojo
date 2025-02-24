@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAprendre</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+</head>
+<body>
+    <nav class="navegacion"> 
+        <a href="index.html" class="logo">
+            <img src="logo.jpeg" alt="logo">
+        </a>
+        <a href="categorias.html">Categorias</a>
+        <input type="text" placeholder="Buscar">
+        <a href="conocenos.html">Conocenos</a>
+        <!-------------------------------------------------------------->
+        <div class="button-modal">
+            <label for="btn-modal">
+                Iniciar Sesion
+            </label>
+        </div>
+        <input type="checkbox" id="btn-modal">
+        <div class="container-modal">
+            <div class="content-modal">
+                <form>
+                    <div class="btn-cerrar">
+                        <label for="btn-modal">X</label>
+                    </div>
+                    <input type="email" placeholder="Inserta tu e-mail" class="inicio-email">  </input><br>
+                    <input type="password" placeholder="Contraseña" class="inicio-contrasena">  </input><br>
+                    <!--------Esto es el formulario modal del olvide mi contraseña----------------->
+                    <!-----OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+                    <div class="button-modal3">
+                        <label for="btn-modal3">
+                            Olvide mi contraseña
+                        </label>
+                    </div>
+                    <input type="checkbox" id="btn-modal3">
+                    <div class="container-modal3">
+                        <div class="content-modal3">
+                            <form>
+                                <div class="btn-cerrar3">
+                                    <label for="btn-modal3">X</label>
+                                </div>
+                                <input type="email" placeholder="Inserta tu e-mail" class="inicio-email3">  </input><br>
+                                <input type="password" placeholder="Nueva Contraseña" class="inicio-contrasena3">  </input><br>
+                                <input type="password" placeholder="Confirmar Contraseña" class="inicio-contrasena3">  </input><br>
+                            </form>
+                        </div>
+                        <label for="btn-modal3" class="cerrar-modal3"></label>
+                    </div>
+                    <!-----OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO--->
+                    <!-----OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+                </form>
+            </div>
+            <label for="btn-modal" class="cerrar-modal"></label>
+        </div>
+        <!--<a href="iniciarSesion.html"><button type="button">Inicia Sesión</button></a>     ---------------->
+        <!---------------------------------------------------------------------->
+        <div class="button-modal2">
+            <label for="btn-modal2">
+                Regístrate
+            </label>
+        </div>
+        <input type="checkbox" id="btn-modal2">
+        <div class="container-modal2">
+            <div class="content-modal2">
+                <form method="POST"> <!-- Aquí agregamos el formulario de registro -->
+                    <div class="btn-cerrar2">
+                        <label for="btn-modal2">X</label>
+                    </div>
+                    <input type="nombre" placeholder="Inserta tu nombre" class="registro-nombre">  </input><br>
+                    <input type="apellidos" placeholder="Inserta tu(s) apellido(s)" class="registro-nombre">  </input><br>
+                    <input type="edad" placeholder="Edad" class="registro-edad">  </input><br>
+                    <input type="telefono" placeholder="Inserta tu telefono" class="registro-edad">  </input><br>
+                    <input type="correo" placeholder="Inserta tu correo" class="inicio-email2">  </input><br>
+                    <input type="password" placeholder="Contraseña" class="inicio-contrasena2">  </input><br>
+                    <button type="submit">Aceptar</button> <!-- Botón para enviar el formulario -->
+                    <?php 
+                        include("registraru.php");
+                    ?>
+                </form>
+            </div>
+            <label for="btn-modal2" class="cerrar-modal2"></label>
+        </div>
+        <!--<a href="registro.html"><button href="registro.html" type="button">Regístrate</button></a>  ------>
+      </nav>  
+      <div>
+          <p class="pinicio">¡Desbloquea tu potencial <br>
+              médico desde cualquier lugar! </p> 
+          <p class="pinicio2">
+              Únete a nuestra comunidad de aprendizaje en línea y lleva tu carrera médica<br>
+              al siguiente nivel. Suscríbete hoy para obtener conocimientos especializados <br>
+              y la libertad de aprender a tu propio ritmo. ¡Tú camino hacia la excelencia<br>
+              médica comienza aquí!</p>
+      </div>  
+      <div>
+          <a id="registro-link" class="registrarse">¡REGISTRATE AHORA! </a>  
+      </div>
+      <!--Script para que se vuelva abrir la ventana modal del registro-->
+      <script>
+        document.getElementById("registro-link").onclick = function() {
+            document.getElementById("btn-modal2").checked = true;
+        };
+      </script>
+</body>
+</html>
